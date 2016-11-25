@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_display_recipe"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -49,13 +49,19 @@
                 android:id="@+id/imageView3"
                 android:layout_weight="1"
                 android:layout_marginRight="5dp" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
         </LinearLayout>
 
     </LinearLayout>
 
     <TabHost
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentTop="false"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -84,89 +90,18 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="185dp"
-                        app:srcCompat="@android:drawable/ic_menu_camera"
-                        android:id="@+id/ivContentRecipeImage" />
-
-                    <TextView
-                        android:text="(Brief Description)"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tvContentDescription"
-                        android:layout_marginTop="5dp" />
-
-                    <Space
-                        android:layout_width="20dp"
-                        android:layout_height="25dp" />
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/layoutCookingTime">
-
-                        <TextView
-                            android:text="Cooking Time:"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/tvCookingTime"
-                            android:textSize="18sp"
-                            android:layout_weight="1" />
-
-                        <TextView
-                            android:text="Cooking Time Result"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/tvCookingTimeResult"
-                            android:layout_weight="1"
-                            android:textSize="18sp" />
-
-                    </LinearLayout>
-
-                    <Space
-                        android:layout_width="20dp"
-                        android:layout_height="25dp" />
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/layoutServings">
-
-                        <TextView
-                            android:text="Serving(s):"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/tvServings"
-                            android:textSize="18sp"
-                            android:layout_weight="1" />
-
-                        <TextView
-                            android:text="Servings Result"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/tvServingsResult"
-                            android:layout_weight="1"
-                            android:textSize="18sp" />
-                    </LinearLayout>
-
-                    <Space
-                        android:layout_width="20dp"
-                        android:layout_height="25dp" />
-
-                    <TextView
-                        android:text="Ingredients:"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/tvContentIngredients"
-                        android:textSize="18sp" />
-
                     <ListView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/lvIngredients" />
+                        android:layout_height="match_parent"
+                        android:id="@+id/lvIngredients"
+                        android:layout_marginTop="10dp"
+                        android:isScrollContainer = "false"
+                        />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_weight="1" />
 
                 </LinearLayout>
 
@@ -179,10 +114,14 @@
                     <ListView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:id="@+id/lvSteps" />
+                        android:id="@+id/lvSteps"
+                        android:isScrollContainer = "false"
+                        />
                 </LinearLayout>
 
             </FrameLayout>
+
         </LinearLayout>
     </TabHost>
+
 </RelativeLayout>

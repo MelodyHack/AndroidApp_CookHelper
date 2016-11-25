@@ -25,4 +25,15 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(v.getContext(), DisplayRecipeActivity.class);
         startActivityForResult(intent, 1);
     }
+
+    public void onMyRecipes(View w){
+        Intent intent = new Intent(w.getContext(), MyRecipes.class);
+        startActivityForResult(intent, 3);
+    }
+
+    public void onSearch(View w){
+        Intent intent = new Intent(w.getContext(), SearchActivity.class);
+        startActivityForResult(intent, 2);
+    }
+
 }

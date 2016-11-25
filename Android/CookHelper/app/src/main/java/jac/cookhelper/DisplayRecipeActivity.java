@@ -39,12 +39,28 @@ public class DisplayRecipeActivity extends AppCompatActivity {
         tabHost.addTab(tabSpec2);
 
 
+
+
+        ListView lvSteps = (ListView) findViewById(R.id.lvSteps);
+        //lvSteps.setScrollContainer(false);
         //RecipeData currentRecipeData = RecipeData.get(position);
         //String[] stepsDescriptions = currentRecipeData.getStepsDescriptions();
-        String[] stepsDescriptions = {"Put this", "Add that", "Cook this", "Thats it"};
+        String[] stepsDescriptions = {"Put this", "Add this", "Cook this", "Thats it"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(DisplayRecipeActivity.this, android.R.layout.simple_list_item_1, stepsDescriptions);
-        ListView lvSteps = (ListView) findViewById(R.id.lvSteps);
         lvSteps.setAdapter(adapter);
+
+        ListView lvIngredients = (ListView) findViewById(R.id.lvIngredients);
+
+        View header = getLayoutInflater().inflate(R.layout.header_display_recipe, null);
+        //View footer = getLayoutInflater().inflate(R.layout.footer, null);
+        lvIngredients.addHeaderView(header);
+        //lvIngredients.addFooterView(footer);
+
+
+        //lvIngredients.setScrollContainer(false);
+        String[] ingredients = {"1 Apple", "500g Pineapple", "1 Egg"};
+        adapter = new ArrayAdapter<String>(DisplayRecipeActivity.this, android.R.layout.simple_list_item_1, ingredients);
+        lvIngredients.setAdapter(adapter);
 
 
     }
@@ -75,7 +91,7 @@ public class DisplayRecipeActivity extends AppCompatActivity {
         }
     }
 
-    public void onListItenClick(ListView l , View v, int position, long id){
+    public void onListItemClick(ListView l , View v, int position, long id){
         RecipeData currentRecipeData = RecipeData.get(position);
         String[] stepsDescriptions = currentRecipeData.getStepsDescriptions();
 

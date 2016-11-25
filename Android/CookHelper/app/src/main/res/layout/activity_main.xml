@@ -27,4 +27,23 @@
         android:layout_below="@+id/addRecipeBtn"
         android:layout_marginTop="50dp"
         android:onClick="onDisplayRecipe" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/btn_dialog"
+        android:id="@+id/imageView3"
+        android:onClick="onMyRecipes"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/ivDisplayRecipe"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_search"
+        android:id="@+id/ivSearch"
+        android:layout_below="@+id/imageView3"
+        android:layout_marginTop="50dp"
+        android:onClick="onSearch" />
+
 </RelativeLayout>

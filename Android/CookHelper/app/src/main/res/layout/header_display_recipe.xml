@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/displayHeader"
+    android:padding="10dp">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        android:id="@+id/ivContentRecipeImage" />
+
+    <TextView
+        android:text="(Brief Description)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvContentDescription"
+        android:layout_marginTop="5dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontalCategories"></LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontalCookingTime">
+
+        <TextView
+            android:text="Cooking Time:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCookingTime"
+            android:textSize="18sp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="Cooking Time Result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCookingTimeResult"
+            android:layout_weight="1"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontalServings"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:text="Serving(s):"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvServings"
+            android:textSize="18sp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="Servings Result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvServingsResult"
+            android:layout_weight="1"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
+    <TextView
+        android:text="Ingredients:"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvContentIngredients"
+        android:textSize="18sp" />
+
+</LinearLayout>
