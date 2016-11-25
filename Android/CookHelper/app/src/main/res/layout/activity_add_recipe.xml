@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_receipe"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="jac.cookhelper.AddRecipeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addParentLayout"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ReceipeNameSection">
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:text="Recipe Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/RecipeNameView"
+                android:textSize="18sp" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="5dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/etRecipeName"
+                android:hint="For Example: Shepherd's Pie"
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="50 characters left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/DescriptionSection"
+            android:addStatesFromChildren="false"
+            android:layout_below="@+id/ReceipeNameSection">
+
+            <TextView
+                android:text="Description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/DescriptionView"
+                android:textSize="18sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:inputType="textPersonName"
+                android:id="@+id/etRecipeDescription"
+                android:hint="Enter a brief description of the recipe..."
+                android:textSize="14sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="200 characters left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/CookingTimeSection"
+            android:layout_below="@+id/DescriptionSection">
+
+            <TextView
+                android:text="Cooking Time (min)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/CookingTimeView"
+                android:textSize="18sp"
+                />
+
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="10dp" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                ></Spinner>
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ServingsSection"
+            android:layout_below="@+id/CookingTimeSection">
+
+            <TextView
+                android:text="Serving(s)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ServingsView"
+                android:textSize="18sp"
+                />
+
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="10dp" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                ></Spinner>
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/IngredientsSection"
+            android:layout_below="@+id/ServingsSection">
+
+            <TextView
+                android:text="Ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/IngredientsView"
+                android:textSize="18sp"
+                android:elevation="0dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ingredientsTable">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:tag="ingRowTag">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ing1"
+                        android:layout_weight="1"
+                        android:hint="Ingredient"
+                        android:textSize="14sp"
+                        android:layout_gravity="bottom"
+                        android:tag="ing" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/por1"
+                        android:layout_weight="1"
+                        android:hint="Portion"
+                        android:textSize="14sp"
+                        android:layout_gravity="bottom"
+                        android:tag="por" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/ic_menu_delete"
+                        android:id="@+id/deleteBtn1"
+                        android:onClick="onIngredientsDeleteClicked" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:tag="ingRowTag">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ing2"
+                        android:layout_weight="1"
+                        android:hint="Ingredient"
+                        android:textSize="14sp"
+                        android:layout_gravity="bottom"
+                        android:tag="ing" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/por2"
+                        android:layout_weight="1"
+                        android:hint="Portion"
+                        android:textSize="14sp"
+                        android:layout_gravity="bottom"
+                        android:tag="por" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/ic_menu_delete"
+                        android:id="@+id/deleteBtn2"
+                        android:onClick="onIngredientsDeleteClicked" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:tag="ingRowTag">
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ing3"
+                        android:layout_weight="1"
+                        android:hint="Ingredient"
+                        android:textSize="14sp"
+                        android:layout_gravity="bottom"
+                        android:tag="ing" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/por3"
+                        android:layout_weight="1"
+                        android:hint="Portion"
+                        android:textSize="14sp"
+                        android:layout_gravity="bottom"
+                        android:tag="por" />
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/ic_menu_delete"
+                        android:id="@+id/deleteBtn3"
+                        android:onClick="onIngredientsDeleteClicked" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:text="Add more ingredient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/addIngredientBtn"
+                android:onClick="onClick"
+                />
+
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/StepsSection"
+            android:layout_below="@+id/IngredientsSection">
+
+            <TextView
+                android:text="Steps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/stepTextView"
+                android:textSize="18sp" />
+
+            <TableLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/stepsTable"
+                android:layout_below="@+id/stepTextView"
+                android:layout_alignParentBottom="true"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/stepTableRow1"
+                    android:tag="1">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            app:srcCompat="@android:drawable/ic_menu_camera"
+                            android:id="@+id/stepImage1"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:onClick="onClickPhoto"
+                            android:tag="stepsPhotoTag"
+                            android:layout_height="185dp" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/stepHorizontal1"
+                            android:layout_below="@+id/stepImage1"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true">
+
+                            <TextView
+                                android:text="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/stepNum1"
+                                android:textSize="16sp"
+                                android:layout_below="@+id/stepImage1"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:tag="stepNumberTag" />
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@android:drawable/ic_menu_delete"
+                                android:id="@+id/stepDeleteBtn1"
+                                android:onClick="onStepsDeleteClicked" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:id="@+id/stepEditTxt1"
+                            android:hint="Click to Enter..."
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/stepHorizontal1"
+                            android:textSize="14sp"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:maxLength="100"
+                            android:maxLines="10"
+                            android:tag="stepsDescription" />
+
+                        <Space
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/stepEditTxt1" />
+
+                    </RelativeLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/stepTableRow2"
+                    android:tag="2">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            app:srcCompat="@android:drawable/ic_menu_camera"
+                            android:id="@+id/stepImage2"
+                            android:tag="stepsPhotoTag"
+                            android:onClick="onClickPhoto"
+                            android:layout_height="185dp" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/stepHorizontal2"
+                            android:layout_below="@+id/stepImage2">
+
+                            <TextView
+                                android:text="2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/stepNum2"
+                                android:textSize="16sp"
+                                android:layout_below="@+id/stepImage2"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:tag="stepNumberTag" />
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@android:drawable/ic_menu_delete"
+                                android:id="@+id/stepDeleteBtn2"
+                                android:onClick="onStepsDeleteClicked" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:id="@+id/stepEditTxt2"
+                            android:hint="Click to Enter..."
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/stepHorizontal2"
+                            android:textSize="14sp"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:maxLength="100"
+                            android:maxLines="10"
+                            android:tag="stepsDescription" />
+
+                        <Space
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/stepEditTxt2" />
+                    </RelativeLayout>
+
+                </TableRow>
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/stepTableRow3"
+                    android:tag="3">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/step3Layout">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            app:srcCompat="@android:drawable/ic_menu_camera"
+                            android:id="@+id/stepImage3"
+                            android:tag="stepsPhotoTag"
+                            android:onClick="onClickPhoto"
+                            android:layout_height="185dp" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/stepHorizontal3"
+                            android:layout_below="@+id/stepImage3">
+
+                            <TextView
+                                android:text="3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/stepNum3"
+                                android:textSize="16sp"
+                                android:layout_below="@+id/stepImage3"
+                                android:layout_weight="1"
+                                android:layout_gravity="center_vertical"
+                                android:tag="stepNumberTag" />
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@android:drawable/ic_menu_delete"
+                                android:id="@+id/stepDeleteBtn3"
+                                android:onClick="onStepsDeleteClicked" />
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:id="@+id/stepEditTxt3"
+                            android:hint="Click to Enter..."
+                            android:layout_height="match_parent"
+                            android:textSize="14sp"
+                            android:inputType="textCapSentences|textMultiLine"
+                            android:maxLength="100"
+                            android:maxLines="10"
+                            android:layout_below="@+id/stepHorizontal3"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:tag="stepsDescription" />
+
+                        <Space
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/stepEditTxt3" />
+
+                    </RelativeLayout>
+
+                </TableRow>
+
+
+            </TableLayout>
+
+            <Button
+                android:text="Add more step"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/addStepsBtn"
+                android:elevation="0dp"
+                android:onClick="onClick" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="50dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/PostActionsSection"
+            android:layout_below="@+id/StepsSection"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:text="Post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/postBtn"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/saveBtn"
+                android:layout_weight="1"
+                android:onClick="onClick (AddRecipeActivity)" />
+
+            <Button
+                android:text="Delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/deleteBtn"
+                android:layout_weight="1" />
+
+            <Button
+                android:text="Cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cancelBtn"
+                android:layout_weight="1"
+                android:onClick="onClick" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</ScrollView>

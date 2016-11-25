@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:id="@+id/ingredientsTableRowTemplate"
+    android:gravity="center_vertical"
+    tools:context="jac.cookhelper.AddRecipeActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ingTemp"
+        android:hint="Ingredient"
+        android:layout_weight="1"
+        android:textSize="14sp"
+        android:layout_gravity="bottom"
+        android:tag="ing" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/porTemp"
+        android:hint="Portion"
+        android:layout_weight="1"
+        android:textSize="14sp"
+        android:layout_gravity="bottom"
+        android:tag="por" />
+
+    <ImageButton
+        app:srcCompat="@android:drawable/ic_menu_delete"
+        android:id="@+id/deleteTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:onClick="onIngredientsDeleteClicked" />
+
+</TableRow>

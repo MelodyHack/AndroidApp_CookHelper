@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/stepTableRowTemplate">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/stepImageTemp"
+            app:srcCompat="@android:drawable/ic_menu_camera"
+            android:onClick="onClickPhoto"
+            android:tag="stepsPhotoTag"
+            android:adjustViewBounds="false"
+            android:layout_width="match_parent"
+            android:layout_height="185dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stepImageTemp"
+            android:id="@+id/stepHorizontalTemp">
+
+            <TextView
+                android:text="Step Number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/stepNumTemp"
+                android:textSize="16sp"
+                android:layout_below="@+id/stepImageTemp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:tag="stepNumberTag" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_menu_delete"
+                android:id="@+id/stepDeleteBtnTemp"
+                android:onClick="onStepsDeleteClicked" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/stepEditTxtTemp"
+            android:hint="Click to Enter..."
+            android:layout_below="@+id/stepHorizontalTemp"
+            android:textSize="14sp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="100"
+            android:maxLines="10"
+            android:tag="stepsDescription" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/stepEditTxtTemp" />
+    </RelativeLayout>
+
+</TableRow>

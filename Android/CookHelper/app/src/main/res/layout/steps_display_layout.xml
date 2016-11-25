@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/stepImageTempDisplay"
+            app:srcCompat="@android:drawable/ic_menu_camera"
+            android:tag="stepsPhotoTag"
+            android:adjustViewBounds="false"
+            android:layout_width="match_parent"
+            android:layout_height="185dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/stepImageTempDisplay"
+            android:id="@+id/stepHorizontalTempDisplay">
+
+            <TextView
+                android:text="Step Number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/stepNumTempDisplay"
+                android:textSize="16sp"
+                android:layout_below="@+id/stepImageTempDisplay"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:tag="stepNumberTag" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_menu_delete"
+                android:id="@+id/stepDeleteBtnTempDisplay"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/stepEditTxtTempDisplay"
+            android:layout_below="@+id/stepHorizontalTempDisplay"
+            android:textSize="14sp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="100"
+            android:maxLines="10"
+            android:tag="stepsDescription"
+            android:text="Step Description" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/stepEditTxtTempDisplay" />
+    </RelativeLayout>
+
+</LinearLayout>
