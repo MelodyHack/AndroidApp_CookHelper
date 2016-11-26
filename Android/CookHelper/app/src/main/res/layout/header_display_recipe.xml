@@ -30,13 +30,56 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/horizontalCategories"></LinearLayout>
+        android:id="@+id/horizontalCategories">
+
+        <TextView
+            android:text="Category:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCategory"
+            android:textSize="18sp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="Category Result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCategoryResult"
+            android:layout_weight="1"
+            android:textSize="18sp" />
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/horizontalCookingTime">
+        android:id="@+id/horizontalTypes"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:text="Type:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvType"
+            android:textSize="18sp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="Type Result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTypeResult"
+            android:layout_weight="1"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontalCookingTime"
+        android:layout_marginTop="25dp">
 
         <TextView
             android:text="Cooking Time:"

@@ -103,9 +103,67 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/CategorySection"
+            android:layout_below="@+id/DescriptionSection">
+
+            <TextView
+                android:text="Category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/CategoryView"
+                android:textSize="18sp"
+                />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="10dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/spinner3" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TypeSection"
+            android:layout_below="@+id/CategorySection">
+
+            <TextView
+                android:text="Type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TypeView"
+                android:textSize="18sp"
+                />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="10dp" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/spinner4"
+                android:layout_height="40dp" />
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/CookingTimeSection"
-            android:layout_below="@+id/DescriptionSection">
+            android:layout_below="@+id/TypeSection">
 
             <TextView
                 android:text="Cooking Time (min)"

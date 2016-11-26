@@ -32,10 +32,30 @@
     <string-array name="category">
         <item>Main dish</item>
         <item>Starter</item>
-        <item>dessert</item>
+        <item>Dessert</item>
         <item>Appetizer</item>
-        <item>drink</item>
+        <item>Drink</item>
         <item>Sauce</item>
+        <item>Sides</item>
+
+    </string-array>
+
+    <string-array name="types">
+        <item>African</item>
+        <item>American</item>
+        <item>Asian</item>
+        <item>Caribbean</item>
+        <item>Canadian</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Greek</item>
+        <item>Hungarian</item>
+        <item>Irish</item>
+        <item>Italian</item>
+        <item>Latin American</item>
+        <item>Mexican</item>
+        <item>Middle Eastern</item>
+        <item>Spanish</item>
     </string-array>
 
 

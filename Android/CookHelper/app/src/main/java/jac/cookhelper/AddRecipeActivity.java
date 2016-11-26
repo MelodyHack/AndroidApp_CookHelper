@@ -37,8 +37,8 @@ import static android.widget.ImageView.ScaleType.CENTER_CROP;
 public class AddRecipeActivity extends AppCompatActivity implements View.OnClickListener {
 
     //Spinners
-    Spinner spinner, spinner2;
-    ArrayAdapter<CharSequence> adapter, adapter2;
+    Spinner spinner, spinner2, spinner3, spinner4;
+    ArrayAdapter<CharSequence> adapter, adapter2, adapter3, adapter4;
 
     Button ingredientsAddRow, stepsAddRow;
     TableLayout ingredientsTable, stepsTable;
@@ -134,6 +134,56 @@ public class AddRecipeActivity extends AppCompatActivity implements View.OnClick
         stepsAddRow = (Button) findViewById(R.id.addStepsBtn);
         stepsTable = (TableLayout) findViewById(R.id.stepsTable);
         stepsTable.setColumnStretchable(0, true);
+
+        // Categories
+        spinner3 = (Spinner)findViewById(R.id.spinner3);
+        adapter3 = ArrayAdapter.createFromResource(this, R.array.category, android.R.layout.simple_spinner_item);
+        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner3.setAdapter(adapter3);
+        spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                Toast.makeText(getBaseContext(), parent.getItemAtPosition(position)+" selected", Toast.LENGTH_LONG).show();
+
+                // Save to Data
+
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        // Types
+        spinner4 = (Spinner)findViewById(R.id.spinner4);
+        adapter4 = ArrayAdapter.createFromResource(this, R.array.types, android.R.layout.simple_spinner_item);
+        adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner4.setAdapter(adapter4);
+        spinner4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                Toast.makeText(getBaseContext(), parent.getItemAtPosition(position)+" selected", Toast.LENGTH_LONG).show();
+
+                // Save to Data
+
+
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+
+
 
 
 
