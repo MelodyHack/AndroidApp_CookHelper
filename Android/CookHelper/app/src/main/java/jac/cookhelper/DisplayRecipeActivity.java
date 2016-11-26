@@ -45,7 +45,7 @@ public class DisplayRecipeActivity extends AppCompatActivity {
         //lvSteps.setScrollContainer(false);
         //RecipeData currentRecipeData = RecipeData.get(position);
         //String[] stepsDescriptions = currentRecipeData.getStepsDescriptions();
-        String[] stepsDescriptions = {"Put this", "Add this", "Cook this", "Thats it"};
+        String[] stepsDescriptions = {"1. Put this", "2. Add this", "3. Cook this", "4. Thats it"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(DisplayRecipeActivity.this, android.R.layout.simple_list_item_1, stepsDescriptions);
         lvSteps.setAdapter(adapter);
 
