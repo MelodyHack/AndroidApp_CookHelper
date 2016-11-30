@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.wendy.cookhelper.DisplayRecipe">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/tvRecipeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/etRecipeName"
+            android:layout_alignParentLeft="true"
+            android:text="@string/recipeName"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etRecipeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_toRightOf="@+id/tvCookingTime"
+            android:layout_alignParentLeft="false">
+        </EditText>
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/etDescription"
+            android:text="@string/description"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignParentLeft="true" />
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etRecipeName"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_alignLeft="@+id/etRecipeName"
+            android:paddingTop="20dp" />
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/category"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignBottom="@+id/etCategory" />
+
+        <EditText
+            android:id="@+id/etCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/etRecipeName"
+            android:layout_below="@+id/etDescription"
+            android:ems="10"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/type"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignBottom="@+id/etType" />
+
+        <EditText
+            android:id="@+id/etType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/etRecipeName"
+            android:layout_below="@+id/etCategory"
+            android:ems="10"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/tvCookingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cookingTime"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignBottom="@+id/etCookingTime" />
+
+        <EditText
+            android:id="@+id/etCookingTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/etRecipeName"
+            android:layout_below="@+id/etType"
+            android:ems="10"
+            android:inputType="text" />
+
+
+
+        <TextView
+            android:id="@+id/tvNumServings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/etNumServings"
+            android:text="@string/numServings"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignParentLeft="true" />
+
+        <EditText
+            android:id="@+id/etNumServings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etCookingTime"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_alignLeft="@id/etRecipeName" />
+
+        <TextView
+            android:id="@+id/tvIngredients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/etIngredients"
+            android:layout_alignParentLeft="true"
+            android:text="@string/ingredients"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/etIngredients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_below="@+id/etNumServings"
+            android:layout_alignLeft="@+id/etRecipeName"
+            android:paddingTop="20dp" />
+
+        <TextView
+            android:id="@+id/tvSteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/steps"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_alignBottom="@+id/etSteps"
+            android:layout_alignParentLeft="true" />
+
+        <EditText
+            android:id="@+id/etSteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_toRightOf="@+id/tvSteps"
+            android:layout_toEndOf="@+id/tvSteps"
+            android:layout_below="@+id/etIngredients"
+            android:layout_alignLeft="@+id/etRecipeName"
+            android:paddingTop="20dp" />
+
+        <Button
+            android:id="@+id/btnSaveRecipe"
+            android:layout_below="@+id/etSteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:onClick="onSave"
+            android:text="@string/save"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</ScrollView>
